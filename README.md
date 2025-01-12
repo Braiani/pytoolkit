@@ -6,11 +6,11 @@
 Welcome to the pytoolkit repository! This project contains an essential toolkit for IT professionals, developed in Python. It includes a variety of tools and scripts to help with everyday IT tasks.
 
 ### Features
+- Check certificate expirations
 - Network scanning
 - System monitoring
 - File management
 - Automation scripts
-- Check certificate expirations
 - Test if an app is up
 
 ### Installation
@@ -39,11 +39,11 @@ This project is licensed under the MIT License.
 Bem-vindo ao repositório pytoolkit! Este projeto contém um kit de ferramentas essencial para profissionais de TI, desenvolvido em Python. Inclui uma variedade de ferramentas e scripts para ajudar nas tarefas diárias de TI.
 
 ### Funcionalidades
+- Verificar expiração de certificados
 - Varredura de rede
 - Monitoramento de sistema
 - Gerenciamento de arquivos
 - Scripts de automação
-- Verificar expiração de certificados
 - Testar se um aplicativo está ativo
 
 ### Instalação
