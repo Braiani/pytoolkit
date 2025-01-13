@@ -22,6 +22,9 @@ class Certificates:
         return days_to_expiry
     
     def get_certificate_details(self):
-        days_to_expiry = self.check_certificate_expiry()
-        print(f"The certificate for {self.hostname} expires in {days_to_expiry} days.")
+        try:
+            days_to_expiry = self.check_certificate_expiry()
+            print(f"The certificate for {self.hostname} expires in {days_to_expiry} days.")
+        except:
+            print(f"Ocorreu um erro ao tentar recuperar informações do site: {self.hostname}")
     
