@@ -21,16 +21,19 @@ if __name__ == '__main__':
 
     if not args.terminal:
         AsciiSplash.print_main_ascii()
-        if args.hostname:
-            cert = Certificates(args.hostname)
+    
+    if args.hostname:
+        cert = Certificates(args.hostname)
+        cert.get_certificate_details()
+        exit()
+        
+    while True:
+        try:
+            print()
+            print("Please enter the following information:")
+            hostname = input("Hostname to check certificate for: ")
+            cert = Certificates(hostname)
             cert.get_certificate_details()
-        while True:
-            try:
-                print()
-                print("Please enter the following information:")
-                hostname = input("Hostname to check certificate for: ")
-                cert = Certificates(hostname)
-                cert.get_certificate_details()
-            except KeyboardInterrupt:
-                AsciiSplash.print_exit_ascii()
-                break
+        except KeyboardInterrupt:
+            AsciiSplash.print_exit_ascii()
+            break
