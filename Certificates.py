@@ -1,6 +1,7 @@
 import ssl
 import socket
 from datetime import datetime
+import argparse
 
 
 class Certificates:
@@ -27,4 +28,15 @@ class Certificates:
             print(f"The certificate for {self.hostname} expires in {days_to_expiry} days.")
         except:
             print(f"Ocorreu um erro ao tentar recuperar informações do site: {self.hostname}")
+
+
+if __name__ == '__main__':
+    # get hostname from argument
+    parser = argparse.ArgumentParser(description='Get certificate details')
+    parser.add_argument('hostname', help='Hostname to get certificate details')
+
+    args = parser.parse_args()
+    hostname = args.hostname
     
+    cert = Certificates(hostname)
+    cert.get_certificate_details()
